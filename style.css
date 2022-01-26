@@ -1,0 +1,179 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+body {
+  overflow: hidden;
+}
+section {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+section .profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+section.show .profile {
+  display: none;
+}
+section .profile .profile-img {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  padding: 0.15em;
+  background-color: rgb(0, 110, 255);
+  margin-bottom: 10px;
+}
+.profile .profile-img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #fff;
+}
+.profile .name,
+.profile .profession {
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+}
+.profile .profession {
+  font-weight: 400;
+  margin-top: 0px;
+}
+.profile .button {
+  margin-top: 15px;
+  background: #4070f4;
+  padding: 12px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.profile .button button {
+  background: none;
+  outline: none;
+  border: none;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+  pointer-events: none;
+}
+.profile .button:hover {
+  background: #275df1;
+  transform: scale(0.9);
+}
+
+section .popup-outer {
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  transform: scale(1.5);
+  transition: opacity 0.2s 0s ease-in-out;
+  transition: transform 0.2s ease-in-out;
+  opacity: 0;
+  pointer-events: none;
+}
+section.show .popup-outer {
+  opacity: 10;
+  pointer-events: auto;
+  transform: scale(1);
+}
+section .popup-box {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 380px;
+  width: 100%;
+  position: relative;
+}
+section .close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-weight: bold;
+  font-size: 24px;
+  cursor: pointer;
+  color: #b4b4b4;
+  transition: all 0.1s ease;
+}
+section .popup-box {
+  overflow: hidden;
+}
+.popup-box .close:hover {
+  color: #333;
+}
+section .popup-box .profile-text {
+  display: flex;
+  align-items: center;
+}
+section .popup-box img {
+  height: 60px;
+  width: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.profile-text .text {
+  display: flex;
+  flex-direction: column;
+  margin-left: 15px;
+}
+.profile-text .text .name {
+  font-size: 19px;
+  font-weight: 400;
+}
+.profile-text .text .profession {
+  font-size: 17px;
+  font-weight: 500;
+}
+section .popup-box textarea {
+  width: 100%;
+  min-height: 140px;
+  outline: none;
+  margin-top: 2em;
+  border: 1px solid #ddd;
+  background-color: #f6f6f6;
+  border-radius: 2px;
+  padding: 1em;
+  font-size: 1em;
+  resize: none;
+  font-weight: 400;
+}
+section .popup-box .button {
+  display: flex;
+  justify-content: end;
+  margin-top: 15px;
+}
+.popup-box .button button {
+  margin-left: 8px;
+  background: #6f93f6;
+  outline: none;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.button button.cancel {
+  background: #f082fc;
+}
+.button button.cancel:hover {
+  background-color: #ec5f95;
+}
+.button button.send:hover {
+  background-color: #275df1;
+}

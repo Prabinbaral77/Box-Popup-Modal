@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Popup modal</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section>
+      <div class="profile">
+        <div class="profile-img">
+          <img src="./img.png" alt="profile image of puspa" />
+        </div>
+        <span class="name">Prabin Baral</span>
+        <span class="profession">Web developer</span>
+        <div id="hireBtn" class="button">
+          <i class="bx bxs-envelope"></i>
+          <button>Hire Me</button>
+        </div>
+      </div>
+
+      <!-- popup box start -->
+      <div class="popup-outer">
+        <div class="popup-box">
+          <i id="close" class="bx bx-x close">x</i>
+          <div class="profile-text">
+            <img src="./img.png" alt="profile image of puspa" />
+            <div class="text">
+              <span class="name">Prabin Baral</span>
+              <span class="profession">Web developer</span>
+            </div>
+          </div>
+          <form action="#">
+            <textarea placeholder="Enter your messaage"></textarea>
+            <div class="button">
+              <button id="close" class="cancel">Cancel</button>
+              <button class="send">Send</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script src="script.js"></script>
+</html>
